@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: cramseypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cramseypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cramseypipelinesjavascriptdocker 
+          image: rsmcontainerregistrytaxdev.azurecr.io/cramseypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
